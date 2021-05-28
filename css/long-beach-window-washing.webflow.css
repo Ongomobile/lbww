@@ -1,3 +1,4 @@
+/* test */
 .ressponsive-nav {
   position: fixed;
   left: 0%;
@@ -441,8 +442,9 @@
   -ms-flex-align: center;
   align-items: center;
   border-radius: 0px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../images/custom2.jpg');
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/custom2.jpg');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))),
+    url("../images/custom2.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/custom2.jpg");
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   text-align: center;
@@ -1121,17 +1123,17 @@
   height: 60px;
   margin-right: 20px;
   border-radius: 8px;
-  background-image: url('../images/Person-Pic-62x.jpg');
+  background-image: url("../images/Person-Pic-62x.jpg");
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .testimonial1-pic.testimonial1-pic2 {
-  background-image: url('../images/Person-Pic-22x.jpg');
+  background-image: url("../images/Person-Pic-22x.jpg");
 }
 
 .testimonial1-pic.testimonial1-pic3 {
-  background-image: url('../images/Person-Pic-32x.jpg');
+  background-image: url("../images/Person-Pic-32x.jpg");
 }
 
 .testimonial1-person-name {
@@ -1389,8 +1391,16 @@
   bottom: 0%;
   z-index: -1;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.9)), to(hsla(0, 0%, 100%, 0.9))), url('../images/queen-mary-2-171869_1920.jpg');
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9)), url('../images/queen-mary-2-171869_1920.jpg');
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(hsla(0, 0%, 100%, 0.9)),
+      to(hsla(0, 0%, 100%, 0.9))
+    ),
+    url("../images/queen-mary-2-171869_1920.jpg");
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9)),
+    url("../images/queen-mary-2-171869_1920.jpg");
   background-position: 0px 0px, 50% 100%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -1572,8 +1582,16 @@
   bottom: 0%;
   z-index: -1;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, 0.9)), to(hsla(0, 0%, 100%, 0.9))), url('../images/queen-mary-2-171869_1920.jpg');
-  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9)), url('../images/queen-mary-2-171869_1920.jpg');
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(hsla(0, 0%, 100%, 0.9)),
+      to(hsla(0, 0%, 100%, 0.9))
+    ),
+    url("../images/queen-mary-2-171869_1920.jpg");
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9)),
+    url("../images/queen-mary-2-171869_1920.jpg");
   background-position: 0px 0px, 50% 100%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -2320,4 +2338,3 @@
     padding-bottom: 60px;
   }
 }
-
