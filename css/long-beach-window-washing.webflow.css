@@ -1,3 +1,7 @@
+#ui-datepicker-div {
+  max-width: 300px;
+  background-color: red;
+}
 .ressponsive-nav {
   position: fixed;
   left: 0%;
