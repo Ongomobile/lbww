@@ -2480,6 +2480,7 @@
 
   .schedule-form-wrapper {
     width: 90%;
+    max-width: 300px;
   }
 
   .contact-info-wrapper {
