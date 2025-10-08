@@ -90,6 +90,8 @@
       } */
 
       /* Chat launcher & window */
+
+      /*
       .sc-launcher[data-v-70482454] {
         top: 120px;
         right: 25px !important;
@@ -102,6 +104,78 @@
         top: 110px;
         right: 100px !important;
         height: 51px !important;
+      }
+      */
+
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .modal {
+        background: #fff;
+        border-radius: 12px;
+        max-width: 500px;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+        animation: slideDown 0.3s ease;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .modal-header h2 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .close-modal {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        line-height: 1;
+        cursor: pointer;
+        color: #555;
+      }
+
+      .modal-body {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* === Responsive === */
+      @media (max-width: 600px) {
+        .modal {
+          max-width: 95%;
+          padding: 1.5rem;
+        }
+
+        .modal-header h2 {
+          font-size: 1.25rem;
+        }
       }
     </style>
   </head>
@@ -143,11 +217,7 @@
     >
       <h1 class="hero-title">Get Clean Windows <br />The Easy Way</h1>
       <p class="larger-paragraph white-hero-paragraph">Just Pick Your Package and Schedule Your Cleaning</p>
-      <a
-        href="#schedule"
-        class="button default-button big-default w-button"
-        >Get Clean Windows</a
-      >
+      <a class="button default-button big-default w-button">Get Clean Windows</a>
     </section>
     <section
       id="pricing"
@@ -644,6 +714,43 @@
       </a>
       <div class="progress-bar"></div>
     </div>
+    <div
+      id="cleanWindowsModal"
+      class="modal-overlay"
+    >
+      <div class="modal">
+        <div class="modal-body">
+          <div
+            id="chat_form"
+            class=""
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Modal Script
+      const modal = document.getElementById('cleanWindowsModal');
+      const openBtn = document.querySelectorAll('a, button');
+      const closeBtn = modal.querySelector('.close-modal');
+
+      openBtn.forEach((btn) => {
+        if (btn.textContent.trim().toLowerCase() === 'get clean windows') {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+          });
+        }
+      });
+
+      closeBtn.addEventListener('click', () => (modal.style.display = 'none'));
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') modal.style.display = 'none';
+      });
+    </script>
     <script
       src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js"
       type="text/javascript"
@@ -662,8 +769,12 @@
       });
     </script>
     <script
+      src="https://app.aminos.ai/js/chat_form_plugin.js"
+      data-bot-id="54527"
+    ></script>
+    <!-- <script
       src="https://app.aminos.ai/js/chat_plugin.js"
       data-bot-id="54296"
-    ></script>
+    ></script> -->
   </body>
 </html>
